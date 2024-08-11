@@ -4,6 +4,33 @@ function calculateCombinations() {
   const numCombinations = Math.pow(characters.length, length);
 
   document.getElementById("result").textContent = numCombinations;
+
+  calculateCrackTime(numCombinations);
+}
+
+function calculateCrackTime(combinations) {
+  const cpuSpeed = document.getElementById("cpu").value;
+  const seconds = combinations / cpuSpeed;
+
+  const minutes = seconds / 60;
+  const hours = minutes / 60;
+  const days = hours / 24;
+  const years = days / 365;
+
+  let crackTimeString = "";
+  if (years >= 1) {
+    crackTimeString = `${years.toFixed(2)} years`;
+  } else if (days >= 1) {
+    crackTimeString = `${days.toFixed(2)} days`;
+  } else if (hours >= 1) {
+    crackTimeString = `${hours.toFixed(2)} hours`;
+  } else if (minutes >= 1) {
+    crackTimeString = `${minutes.toFixed(2)} minutes`;
+  } else {
+    crackTimeString = `${seconds.toFixed(2)} seconds`;
+  }
+
+  document.getElementById("crackTime").textContent = crackTimeString;
 }
 
 setInterval(function () {
