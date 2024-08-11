@@ -15,6 +15,36 @@
     <button onclick="calculateCombinations()">Calculate Combinations</button>
 
     <p>Possible Combinations: <span id="result"></span></p>
+
+    <h2>Crack Time Estimation</h2>
+    <label for="cpu">CPU:</label>
+    <select id="cpu">
+      <option value="1000000">Generic CPU (1 MH/s)</option>
+      <optgroup label="Intel">
+        <option value="14000000">Intel Core i5-13600K (14 MH/s)</option>
+        <option value="20000000">Intel Core i7-13700K (20 MH/s)</option>
+        <option value="28000000">Intel Core i9-13900K (28 MH/s)</option>
+        <option value="12000000">Intel Core i5-12600K (12 MH/s)</option>
+        <option value="17000000">Intel Core i7-12700K (17 MH/s)</option>
+        <option value="22000000">Intel Core i9-12900K (22 MH/s)</option>
+        <option value="9000000">Intel Core i5-11600K (9 MH/s)</option>
+        <option value="13000000">Intel Core i7-11700K (13 MH/s)</option>
+        <option value="18000000">Intel Core i9-11900K (18 MH/s)</option>
+        </optgroup>
+      <optgroup label="AMD">
+        <option value="12000000">AMD Ryzen 5 7600X (12 MH/s)</option>
+        <option value="17000000">AMD Ryzen 7 7700X (17 MH/s)</option>
+        <option value="23000000">AMD Ryzen 9 7950X (23 MH/s)</option>
+        <option value="10000000">AMD Ryzen 5 5600X (10 MH/s)</option>
+        <option value="15000000">AMD Ryzen 7 5800X (15 MH/s)</option>
+        <option value="20000000">AMD Ryzen 9 5900X (20 MH/s)</option>
+        <option value="8000000">AMD Ryzen 5 3600 (8 MH/s)</option>
+        <option value="12000000">AMD Ryzen 7 3700X (12 MH/s)</option>
+        <option value="16000000">AMD Ryzen 9 3900X (16 MH/s)</option>
+      </optgroup>
+    </select>
+
+    <p>Estimated Crack Time: <span id="crackTime"></span></p>
   </div> 
 
   <script src="script.js"></script>
